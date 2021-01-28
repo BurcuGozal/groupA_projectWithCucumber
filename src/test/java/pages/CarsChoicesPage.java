@@ -107,7 +107,38 @@ public class CarsChoicesPage {
 			@FindBy (xpath = "//button[@class='close-accessible-button base-modal--close']")
 			public WebElement closeIcon;
 			
+			@FindBy (xpath = "//*[@class='facet--color-value']")
+			public List<WebElement> exteriorColorPallet;
 			
+			@FindBy (xpath = "(//div[@class='drawer--label'])[8]")
+			public WebElement exteriorColorButton;
+			
+			
+			@FindBy (xpath = "(//a[@href='/cars/volvo/crossovers/pickup-trucks/sport-utilities/wagons/4wdawd'])[2]")
+			public WebElement volvoOption;
+			
+			
+			@FindBy (xpath = "(//a[@href=\"/cars/volvo/crossovers/pickup-trucks/sport-utilities/wagons/4wdawd/remote-start\"])[2]")
+			public WebElement remoteVolvoStart;
+			
+			
+			
+			
+			@FindBy (xpath = "(//div[@class=\"carousel-item hero-image\"])[4]")
+			public WebElement outdoorCarOption;
+			
+			@FindBy (xpath = "//span[@class='price-mileage__car-title__model-trim']")
+			public WebElement outdoorCarModel;
+			
+		
+			@FindBy (xpath = "//span[@class='value-price']")
+			public WebElement outdoorCarPrice;
+
+			@FindBy (xpath = "//div[@class=\"price-mileage__mileage-container\"]")
+			public WebElement outdoorCarMileage;
+
+			@FindBy (xpath = "//span[@class='price-mileage__car-title__year-make']")
+			public WebElement outdoorCarYear;
 			
 			
 	

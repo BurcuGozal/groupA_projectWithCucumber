@@ -46,9 +46,16 @@ public class LoginPage {
 	
 	@FindBy (xpath = "//span[@class='icon-tile-title']")
 	public List<WebElement> shopByTypeSubcategoriesList;
-	
 
 	
+	@FindBy (xpath = "//*[@class='shop-by-lifestyle-img']")
+	public List<WebElement> shopByLifestyleSubcategoriesList;
+	
+	@FindBy (xpath = "(//*[@class='shop-by-lifestyle-img'])[3]")
+	public WebElement family;
+
+	@FindBy (xpath = "(//*[@class='shop-by-lifestyle-img'])[4]")
+	public WebElement outdoor;
 	
 	
 	

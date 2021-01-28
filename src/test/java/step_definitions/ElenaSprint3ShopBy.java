@@ -15,7 +15,7 @@ import pages.LoginPage;
 import utilities.BrowserUtils;
 import utilities.Driver;
 
-public class ElenaSprint3ShopByType {
+public class ElenaSprint3ShopBy {
 	@Given("The User is on the homepage")
 	public void theUserIsOnTheHomepage() {
 	  	   Driver.getDriver().get("https://www.carmax.com");
@@ -45,6 +45,19 @@ public class ElenaSprint3ShopByType {
 	    assertEquals(expected, Driver.getDriver().getTitle());
 	}
 	
+	
+	
+	@Then("The user should see the following Shop by lifestyle subcategories")
+	public void theUserShouldSeeTheFollowingShopByPriceSubcategories(List<String> expectedList) {
+		LoginPage lp = new LoginPage();
+		 
+		 
+	       List<String> actualList = BrowserUtils.getElementsText(lp.shopByLifestyleSubcategoriesList);
+	       
+	        for (int i = 0; i<actualList.size(); i++) {
+				assertEquals(expectedList.get(i).toLowerCase(), actualList.get(i).toLowerCase());
+			}
+	}
 
 
 }
