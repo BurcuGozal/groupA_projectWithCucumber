@@ -3,6 +3,7 @@ package step_definitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.interactions.Actions;
 import pages.NihalLinkPage;
 import pages.NihalBrowseByCategoryPage;
 import utilities.BrowserUtils;
@@ -53,8 +54,10 @@ public class NihalSprint3BrowseByCategory {
     public void the_user_clikcs(String string) {
         NihalBrowseByCategoryPage n=new NihalBrowseByCategoryPage();
         n.toyota.click();
+        BrowserUtils.waitForPageToLoad(2000);
         BrowserUtils.waitForClickablility(n.keepinStore,2000);
-        BrowserUtils.hover(n.keepinStore);
+        Actions actions=new Actions(Driver.getDriver());
+        actions.moveToElement(n.keepinStore).click().build().perform();
 
     }
 

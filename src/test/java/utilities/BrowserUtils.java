@@ -52,7 +52,7 @@ public class BrowserUtils {
 	 */
 	public static void hover(WebElement element) {
 		Actions actions = new Actions(Driver.getDriver());
-		actions.moveToElement(element).click().build().perform();
+		actions.moveToElement(element).perform();
 	}
 
 	/**
