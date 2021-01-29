@@ -1,6 +1,6 @@
 Feature: Verify Exterior Colors for Family Cars 
 
- 
+
    Scenario: Verify Exterior Colors for Family Cars 
       Given The User is on the homepage
       When The user clicks on Shop page link

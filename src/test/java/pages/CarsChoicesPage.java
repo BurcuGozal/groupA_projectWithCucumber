@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.BrowserUtils;
 import utilities.Driver;
 
 public class CarsChoicesPage {
@@ -141,5 +142,24 @@ public class CarsChoicesPage {
 			public WebElement outdoorCarYear;
 			
 			
+			
+			@FindBy (xpath = "(//a[@href='/cars/honda/accord'])[2]")
+			public WebElement accord;
+			
+			@FindBy (xpath = "(//a[@href='/cars/honda/civic'])[2]")
+			public WebElement civic;
+			
+				
+
+
+
+
+
+			public void clickOnCarModel(String carmodel) {
+				String xpath = "(//a[@href='/cars/honda/"+carmodel+"'])[2]" ;
+				BrowserUtils.jsClick(Driver.getDriver().findElement(By.xpath(xpath)));
+				
+			}
+
+		}
 	
-}
