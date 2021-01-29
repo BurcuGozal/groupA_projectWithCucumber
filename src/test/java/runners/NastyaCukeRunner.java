@@ -10,10 +10,9 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @CucumberOptions(
 
-		tags = "@temp", // "@negative or @smoke", "@smoke and @negative and @login"
+		tags = "@nastya", // "@negative or @smoke", "@smoke and @negative and @login"
 
 		features = "src/test/resources/features", // feature file folder path
-
 		glue = "step_definitions", // step def classes folder path
 
 		plugin = { "summary", // for generating step definition snippets
@@ -33,6 +32,6 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		, snippets = SnippetType.CAMELCASE // to generate snippets with camelcase syntax
 
 )
-public class CukeRunner {
+public class NastyaCukeRunner {
 
 }

@@ -26,7 +26,7 @@ public class NihalSprint3Schedule {
     @When("the user enters the credentials for schedule")
     public void the_user_enters_the_credentials_for_schedule() {
         NihalLinkPage n=new NihalLinkPage();
-        BrowserUtils.waitForClickablility(n.firstName,2000);
+        BrowserUtils.waitForClickablility(n.firstName,5);
         n.firstName.sendKeys("john");
         n.lastName.sendKeys("doe");
         n.phone.sendKeys("1234321234");
