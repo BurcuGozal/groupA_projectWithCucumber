@@ -15,6 +15,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class NihalSprint3BrowseByCategory {
+	
     @When("The user scroll down the page")
     public void the_user_scroll_down_the_page() {
         BrowserUtils.scroll(0,100);
