@@ -13,7 +13,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class NastyaSp3VerifyLinksAndCars {
-	
+
 	@Given("The user is on the home page")
 	public void theUserIsOnTheHomePage() {
 		Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -30,7 +30,7 @@ public class NastyaSp3VerifyLinksAndCars {
 		List<String> actualList = BrowserUtils.getElementsText(mp.researchLinks);
 		System.out.println(actualList);
 		System.out.println(expectedLinks);
-		assertEquals(expectedLinks,actualList);
+		assertEquals(expectedLinks, actualList);
 	}
 
 	@When("The user clicks on the link {string}")
@@ -49,6 +49,5 @@ public class NastyaSp3VerifyLinksAndCars {
 		List<String> actualCars = BrowserUtils.getElementsText(mp.bestMidSizeSuv);
 		assertEquals(expectedCars, actualCars);
 	}
-
 
 }

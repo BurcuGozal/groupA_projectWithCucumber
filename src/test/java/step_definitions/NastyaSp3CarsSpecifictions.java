@@ -16,48 +16,49 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class NastyaSp3CarsSpecifictions {
-	
-	
+
 	@Given("The user is on the main page")
 	public void theUserIsOnTheMainPage() {
-	    Driver.getDriver().get(ConfigReader.getProperty("url"));
+		Driver.getDriver().get(ConfigReader.getProperty("url"));
 	}
 
 	@Given("Clicks on Button See more cars")
 	public void clicksOnButtonSeeMoreCars() {
-	    BrowserUtils.scroll(0, 900);
-	    NastyaMainPage mp = new NastyaMainPage();
-	    mp.buttonSee.click();
+		BrowserUtils.scroll(0, 900);
+		NastyaMainPage mp = new NastyaMainPage();
+		mp.buttonSee.click();
 	}
 
 	@When("The user chooses the make as {string}")
 	public void theUserChoosesTheMakeAs(String string) {
 		NastyaMainPage mp = new NastyaMainPage();
-	    BrowserUtils.jsClick(mp.keepStoreButton);
-	    BrowserUtils.jsClick(mp.dropDownMake);
-	    BrowserUtils.jsClick(mp.chooseCar);
-	    
+		BrowserUtils.jsClick(mp.keepStoreButton);
+		BrowserUtils.jsClick(mp.dropDownMake);
+		BrowserUtils.jsClick(mp.chooseCar);
+		BrowserUtils.waitForPageToLoad(5);
+
 	}
 
 	@When("The user clicks on the first choice")
 	public void theUserClicksOnTheFirstChoice() {
-	   NastyaMainPage mp = new NastyaMainPage();
-	   BrowserUtils.jsClick(mp.firstCar);
+		NastyaMainPage mp = new NastyaMainPage();
+		BrowserUtils.jsClick(mp.firstCar);
+		BrowserUtils.waitForPageToLoad(5);
 	}
 
 	@When("The user scrolldown the page and clicks on the {string}")
 	public void theUserScrolldownThePageAndClicksOnThe(String string) {
 		NastyaMainPage mp = new NastyaMainPage();
-	    BrowserUtils.scroll(0, 700);
-	    BrowserUtils.waitForPageToLoad(5);
-	    BrowserUtils.jsClick(mp.featuresAndSpecs);
+		BrowserUtils.scroll(0, 700);
+		BrowserUtils.waitForPageToLoad(5);
+		BrowserUtils.jsClick(mp.featuresAndSpecs);
 	}
 
 	@Then("The user should see all the specificatons as follows")
 	public void theUserShouldSeeAllTheSpecificatonsAsFollows(List<String> expectedSpecifications) {
 		NastyaMainPage mp = new NastyaMainPage();
 		List<String> actualSpecifications = BrowserUtils.getElementsText(mp.allSpecifications);
-		assertEquals(expectedSpecifications,actualSpecifications);
+		assertEquals(expectedSpecifications, actualSpecifications);
 	}
 
 }

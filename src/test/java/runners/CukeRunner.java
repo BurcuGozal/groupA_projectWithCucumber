@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @CucumberOptions(
 
-		tags = "@temp", // "@negative or @smoke", "@smoke and @negative and @login"
+		tags = "@temp or @nihal or @nastya", // "@negative or @smoke", "@smoke and @negative and @login"
 
 		features = "src/test/resources/features", // feature file folder path
 

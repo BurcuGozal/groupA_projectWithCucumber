@@ -14,7 +14,7 @@ import pages.NastyaMainPage;
 import utilities.BrowserUtils;
 import utilities.ConfigReader;
 
-public class NastyaSp3VerifyMake {
+public class NastyaSp3VerifyModel {
 
 	@Given("The user scrolls to the appraisel section")
 	public void theUserScrollsToTheAppraiselSection() {
@@ -32,8 +32,8 @@ public class NastyaSp3VerifyMake {
 	@Then("The user should be able to see all the model of that car")
 	public void theUserShouldBeAbleToSeeAllTheModelOfThatCar(List<String> expectedModels) {
 		NastyaMainPage mp = new NastyaMainPage();
-		BrowserUtils.jsClick(mp.modelBox);
-		Select s = new Select(mp.modelBox);
+		BrowserUtils.jsClick(mp.term);
+		Select s = new Select(mp.termLength);
 		List<WebElement> models = s.getOptions();
 		List<String> actualModels = BrowserUtils.getElementsText(models);
 		for (int i = 0; i < actualModels.size(); i++) {

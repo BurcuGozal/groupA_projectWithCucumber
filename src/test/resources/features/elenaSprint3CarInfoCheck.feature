@@ -1,6 +1,7 @@
+@temp
 Feature: Verify car information using DataTable
 
-   	
+  
    Scenario: Verify model, price, mileage and year using DataTable with Lists of Maps 
       Given The User is on the homepage
       When The user clicks on Shop page link

@@ -1,4 +1,5 @@
-Feature: Verify Car Specifications And Features
+@nastya
+Feature: Verify Car Specifications
 		As a user I want to see all the car Specifications for a chosen car
 
 	Scenario: Verify Car Specifications
@@ -10,19 +11,19 @@ Feature: Verify Car Specifications And Features
 		Then The user should see all the specificatons as follows
 		
 		|	City/Highway Gas Mileage	|
-		|	24/33 mpg			|
+		|	24/33 mpg					|
 		|	Exterior/Interior Color		|
-		|	Black/Black			|
+		|	Gray/Black					|
 		|	Transmission				|
-		|	Automatic			|
+		|	Automatic					|
 		|	Drive						|
-		|	4WD					|
+		|	4WD							|
 		|	Engine						|
-		|	2.0L				|
+		|	2.0L						|
 		|	Cylinders					|	
-		|4					|
+		|	4							|
 		|	Horsepower					|
-		|	220 hp@4500rpm		|
+		|	220 hp@4500rpm				|
 		|	Torque						|
-		|	258 torque@1600rpm	|
+		|	258 torque@1600rpm			|
 		

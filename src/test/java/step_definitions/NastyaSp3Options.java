@@ -14,23 +14,21 @@ import pages.NastyaMainPage;
 import utilities.BrowserUtils;
 
 public class NastyaSp3Options {
-	
+
 	@Given("The user clicks on the {string} link")
 	public void theUserClicksOnTheLink(String string) {
-	    BrowserUtils.scroll(0, 2000);
+		BrowserUtils.scroll(0, 2000);
 	}
-
 
 	@When("The user clicks on the {string}")
 	public void theUserClicksOnThe(String link) {
-	    NastyaMainPage mp = new NastyaMainPage();
-	    mp.suvMidsize.click();
-	    String midLink = mp.venza.getText();
-	    assertEquals(link,midLink);
-	    mp.toyotaCar.click();
-	    BrowserUtils.waitForPageToLoad(5);
-	    BrowserUtils.jsClick(mp.keepStoreButton);
-	    
+		NastyaMainPage mp = new NastyaMainPage();
+		mp.suvMidsize.click();
+		String midLink = mp.venza.getText();
+		assertEquals(link, midLink);
+		mp.toyotaCar.click();
+		BrowserUtils.waitForPageToLoad(5);
+		BrowserUtils.jsClick(mp.keepStoreButton);
 
 	}
 
