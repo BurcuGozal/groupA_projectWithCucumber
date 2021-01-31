@@ -21,7 +21,7 @@ import org.junit.runner.RunWith;
 				    "rerun:target/failed-scenarios.txt" // to create a text file with the paths for failed scenarios to be re-run
 		         }  
 		
-		,dryRun = false  // to run the test without launching, we need this to generate step def snippets
+//		,dryRun = false  // to run the test without launching, we need this to generate step def snippets
 		
 		,monochrome = true  // to display console characters correctly in Windows
 		
