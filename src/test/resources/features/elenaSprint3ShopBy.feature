@@ -1,6 +1,6 @@
 Feature: Verify "Shop by" page details
 
- 
+
    Scenario: Verify Shop by type page details
       Given The User is on the homepage
       When The user clicks on Shop page link
@@ -22,8 +22,8 @@ Feature: Verify "Shop by" page details
       And  The page title should be "Used Cars for Sale - CarMax"
         
 
-		 
-	 Scenario: Verify Shop by price page details
+	@temp	 
+	 Scenario: Verify Shop by lifestyle page details
       Given The User is on the homepage
       When The user clicks on Shop page link
       Then The user should see the following Shop by lifestyle subcategories
