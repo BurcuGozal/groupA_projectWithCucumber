@@ -12,8 +12,8 @@ Then The user should see Compact, Mid-size, Full-size car options
 |Full-size|
 
 
-Scenario: Verify if when user click on the Compact option of Size filter, the Compact will be seen in URL, as well
-Given The user is on the homepage
-When The user clicks on Shop All Cars button
-And The user clicks on Size options and then clicks on Compact
-Then The user should be able to see the "Compact" in websites URL, as well
+#Scenario: Verify if when user click on the Compact option of Size filter, the Compact will be seen in URL, as well
+#Given The user is on the homepage
+#When The user clicks on Shop All Cars button
+#And The user clicks on Size options and then clicks on Compact
+#Then The user should be able to see the "Compact" in websites URL, as well
