@@ -31,6 +31,10 @@ public class BurcuSprint3FilterMileage {
 	    b.shopAllCars.click();
 	    
 	    BrowserUtils.waitForPageToLoad(3);
+	    
+	    BrowserUtils.jsClick(b.keepStoreButton);
+	    
+	    BrowserUtils.waitForPageToLoad(3);
 
 	}
 
@@ -38,8 +42,16 @@ public class BurcuSprint3FilterMileage {
 	public void the_user_click_on_the_mileage_option() {
 		
 		BurcuPage b = new BurcuPage();
-	      
+		
+		BrowserUtils.jsClick(b.keepStoreButton);
+		    
+		BrowserUtils.waitForPageToLoad(3);
+
 	    b.filterMileage.click();
+	    
+	    BrowserUtils.waitForPageToLoad(3);
+	    
+	    BrowserUtils.jsClick(b.keepStoreButton);
 	    
 	    BrowserUtils.waitForPageToLoad(3);
 	    

@@ -3,11 +3,15 @@ package step_definitions4;
 import static org.junit.Assert.assertEquals;
 
 
+
 import static org.junit.Assert.assertTrue;
 
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-import io.cucumber.java.en.Given;
+
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,23 +21,11 @@ import utilities.Driver;
 
 public class BurcuSprint3FilterSize {
 	
-	@Given("The user is on the homepage")
-	public void the_user_is_on_the_homepage() {
-		
-		 Driver.getDriver().get("https://www.carmax.com");
-
-	}
-
-	@When("The user clicks on Shop All Cars button")
-	public void the_user_clicks_on_shop_all_cars_button() {
-		
-		BurcuPage b = new BurcuPage();
-	       
-	    b.shopAllCars.click();
-	    
-	    BrowserUtils.waitForPageToLoad(3);
 	
-	}
+
+	
+	
+	
 	
 	@When("The user clicks on Size option from the Filter list")
 	public void the_user_clicks_on_size_option_from_the_filter_list() {
@@ -41,11 +33,19 @@ public class BurcuSprint3FilterSize {
 	       
 	    b.shopAllCars.click();
 	    
-	    BrowserUtils.waitForPageToLoad(3);
+	    BrowserUtils.waitForPageToLoad(5);
+	    
+	    BrowserUtils.jsClick(b.keepStoreButton);
+	    
+	    BrowserUtils.waitForPageToLoad(5);
 	   
 	    b.filterSize.click();
 	    
-	    BrowserUtils.waitForPageToLoad(3);
+	    BrowserUtils.waitForPageToLoad(5);
+	    
+	    BrowserUtils.jsClick(b.keepStoreButton);
+	    
+	    BrowserUtils.waitForPageToLoad(5);
 
 	}
 
@@ -54,14 +54,14 @@ public class BurcuSprint3FilterSize {
 		
 		BurcuPage b = new BurcuPage();
 		
-		List<String> actualList = BrowserUtils.getElementsText(b.filterSizeList);
-		
-        for (int i = 0; i<actualList.size(); i++) {
-            
-        	assertEquals(expectedList.get(i).toLowerCase(), actualList.get(i).toLowerCase());
+		List<String> List=new ArrayList<>(Arrays.asList("Compact", "Mid-size", "Full-size"));
 
+	    System.out.println(expectedList);
+	    
+	    
+		assertTrue(expectedList.containsAll(List));
 	}
-	}
+	
 
 	@When("The user clicks on Size options and then clicks on Compact")
 	public void the_user_clicks_on_size_options_and_then_clicks_on_compact() {
@@ -69,6 +69,13 @@ public class BurcuSprint3FilterSize {
 		BurcuPage b = new BurcuPage();
 
 	    b.filterSizeCompact.click();
+	    
+	    BrowserUtils.waitForPageToLoad(5);
+	    
+	    BrowserUtils.jsClick(b.keepStoreButton);
+	    
+	    BrowserUtils.waitForPageToLoad(5);
+
 	    
 	    
 	}

@@ -15,23 +15,6 @@ import utilities.Driver;
 public class BurcuSprint3FilterTransmission {
 	
 	
-	@Given("The user is on the homepage")
-	public void the_user_is_on_the_homepage() {
-		
-		 Driver.getDriver().get("https://www.carmax.com");
-
-	}
-
-	@When("The user clicks on Shop All Cars button")
-	public void the_user_clicks_on_shop_all_cars_button() {
-		
-		BurcuPage b = new BurcuPage();
-	       
-	    b.shopAllCars.click();
-	    
-	    BrowserUtils.waitForPageToLoad(3);
-
-	}
 	
 	
 	@When("The user clicks on the Transmission option")
@@ -41,7 +24,11 @@ public class BurcuSprint3FilterTransmission {
 		
 		b.filterTransmission.click();
 		
-		BrowserUtils.waitForPageToLoad(3);
+		BrowserUtils.waitForPageToLoad(5);
+		
+		BrowserUtils.jsClick(b.keepStoreButton);
+		
+		BrowserUtils.waitForPageToLoad(5);
 		
 	}
 
@@ -66,11 +53,21 @@ public class BurcuSprint3FilterTransmission {
 		
 		b.filterTransmission.click();
 		
-		BrowserUtils.waitForPageToLoad(3);
+		BrowserUtils.waitForPageToLoad(5);
+	    
+	    BrowserUtils.jsClick(b.keepStoreButton);
+	    
+	    BrowserUtils.waitForPageToLoad(5);
+
 		 
 		b.filterTransmissionAutomatic.click();
 		
-		BrowserUtils.waitForPageToLoad(3);
+		BrowserUtils.waitForPageToLoad(5);
+	    
+	    BrowserUtils.jsClick(b.keepStoreButton);
+	    
+	    BrowserUtils.waitForPageToLoad(5);
+
 	}
 
 	@Then("The user can see the {string} in the websites URL")
