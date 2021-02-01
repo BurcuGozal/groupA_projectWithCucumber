@@ -1,4 +1,4 @@
-@signOut
+@furkan
 Feature: Customer sign out
 As a user I want to be able to sign out succesfully
 

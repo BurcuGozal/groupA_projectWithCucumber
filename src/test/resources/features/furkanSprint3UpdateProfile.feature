@@ -1,4 +1,4 @@
-@updateProfile
+@furkan
 Feature: Update profile
 
 Scenario: Verify message after updating profile

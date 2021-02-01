@@ -1,4 +1,4 @@
-@register
+@furkan
 Feature: Verify registeration 
 
 Scenario Outline: Verify registeration with right credentials

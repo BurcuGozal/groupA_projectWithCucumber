@@ -1,4 +1,4 @@
-@deleteCar
+@furkan
 Feature: Delete saved cars
 
 As a user, I want to be able sucessfully delete the car I liked before

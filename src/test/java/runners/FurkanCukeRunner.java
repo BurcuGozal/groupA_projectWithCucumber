@@ -10,9 +10,9 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @RunWith( Cucumber.class)
 @CucumberOptions(
 		
-		tags= "@updateProfile",
+		tags= "@furkan",
 		features = "src/test/resources/features",  // feature file folder path
-		glue = "stepDefinitions", // step def classes folder path
+		glue = "stepDefinitions3", // step def classes folder path
 		
 		plugin = {  "summary", // for generating step definition snippets
 			    "html:target/html-report.html", // to generate basic cucumber html report

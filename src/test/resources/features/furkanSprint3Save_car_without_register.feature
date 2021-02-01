@@ -1,4 +1,4 @@
-@saveCar
+@furkan
 Feature: Save car
 As a user I should be able to like a car without register and see it in saved cars menu
 

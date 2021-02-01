@@ -1,4 +1,4 @@
-	@signIn
+	@furkan
 	Feature: Customer Sign in
 	As a user I want to be able to sign in
 	

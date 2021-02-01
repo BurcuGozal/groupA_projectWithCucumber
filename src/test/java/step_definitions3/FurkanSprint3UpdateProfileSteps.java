@@ -1,4 +1,4 @@
-package step_definitions;
+package step_definitions3;
 
 import org.openqa.selenium.JavascriptExecutor;
 import static org.junit.Assert.*;
