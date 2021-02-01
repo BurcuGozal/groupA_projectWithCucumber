@@ -45,18 +45,11 @@ public class FurkanSprint3UpdateProfileSteps {
 		BrowserUtils.waitFor(5);
 	}
 
-	@When("The user enters following information")
-	public void theUserEntersFollowingInformation(List<User> dataTable) {
-		MyProfilePage mpp = new MyProfilePage();
-		User user = dataTable.get(0);
-		
-		mpp.addressLine1.sendKeys(user.getAddress());
-		mpp.zipCode.sendKeys(user.getZip());
-		mpp.state.sendKeys(user.getState());
-		mpp.city.sendKeys(user.getCity());
-		mpp.phoneNumber.sendKeys(user.getPhoneNumber());
-		BrowserUtils.waitFor(3);
-		
+	@When("The user enters {string} at the end of address line")
+	public void theUserEntersAtTheEndOfAddressLine(String string) {
+		 MyProfilePage mpp = new MyProfilePage();
+		 mpp.addressLine1.click();
+		 mpp.addressLine1.sendKeys(string);
 	}
 
 	@When("The user clicks on update profile button")
