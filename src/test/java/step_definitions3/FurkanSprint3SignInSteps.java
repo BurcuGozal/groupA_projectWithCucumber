@@ -61,7 +61,7 @@ public class FurkanSprint3SignInSteps {
 		
 		WebElement customer=Driver.getDriver().findElement(By.xpath("//h4[@class='kmx-typography--headline-1']"));
 		String customerName = customer.getText();
-		assertEquals(ConfigReader.getProperty("customer") , customerName);
+		assertEquals(ConfigReader.getProperty("customer").toLowerCase() , customerName);
 		
 	}
 

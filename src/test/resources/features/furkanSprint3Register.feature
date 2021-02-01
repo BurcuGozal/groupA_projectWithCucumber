@@ -16,6 +16,5 @@ Then The user should be able to see his "<firstName>"
 
 Examples:
 |firstName |lastName |email             |password   |confirmPassword |
-|Jo        |Biden    |jbiden15@gmail.com |johndoe1   |johndoe1        |
-|Henry     |Biden    |hbiden15@gmail.com |johndoe1   |johndoe1        |
-|Alex      |Biden    |abiden15@gmail.com |johndoe1   |johndoe1        |
+|Jo        |Biden    |jbiden18@gmail.com |johndoe1   |johndoe1        |
+|Henry     |Biden    |hbiden18@gmail.com |johndoe1   |johndoe1        |
