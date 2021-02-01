@@ -13,16 +13,17 @@ public class BurcuPage {
 		PageFactory.initElements(Driver.getDriver(), this);  
 
 }
-	@FindBy(xpath = "//a[contains(@class, 'reason-to-believe--shop-all-cars-button')]")
+	
+	@FindBy(xpath = "(//a[@href='/cars/all'])[3]")
 	public WebElement shopAllCars;
 	 
-	@FindBy(xpath = "//*[@id=\"VehicleSize\"]/div[2]")
+	@FindBy(xpath = "//div[@class='drawer--label'][@aria-label='Size']")
 	public WebElement filterSize; 
 	
-	@FindBy(xpath = "//*[@id=\"VehicleSize\"]/div[3]/ul/li")
+	@FindBy(xpath = "//li[@class='refinement-value']")
 	public List <WebElement> filterSizeList; 
 	
-	@FindBy(xpath = "//*[@id=\"VehicleSize\"]/div[3]/ul/li[1]")
+	@FindBy(xpath = "(//li[@class='refinement-value'])[1]")
 	public WebElement filterSizeCompact;
 	
 	@FindBy(xpath = "//li[@class= 'refinement-value'][@data-clickprops = 'Element type: Facet,Value: Mid-size,Is selected: false']")
@@ -31,29 +32,29 @@ public class BurcuPage {
 	@FindBy(xpath = "//li[@class= 'refinement-value'][@data-clickprops = 'Element type: Facet,Value: Full-size,Is selected: false']")
 	public WebElement filterSizeFullSize;
 	
-	@FindBy(xpath = "//*[@id=\"Transmission\"]/div[3]/ul/li")
+	@FindBy(xpath = "//li[@class='refinement-value']")
 	public List <WebElement> filterTransmissionList;
 	
-	@FindBy(xpath = "//*[@id=\"Transmission\"]/div[2]")
+	@FindBy(xpath = "//div[@class='drawer--label'][@aria-label='Transmission']")
 	public WebElement filterTransmission;	
 	
-	@FindBy(xpath = "//*[@id=\"Transmission\"]/div[3]/ul/li[1]")
+	@FindBy(xpath = "//li[@class='refinement-value'][1]")
 	public WebElement filterTransmissionAutomatic;
 	
-	@FindBy(xpath = "//li[@class= 'refinement-value'][@data-clickprops = 'Element type: Facet,Value: Manual 5 Speed,Is selected: false']")
+	@FindBy(xpath = "//li[@class='refinement-value'][3]")
 	public WebElement filterTransmissionAutomaticManual5;
 	
-	@FindBy(xpath = "//li[@class= 'refinement-value'][@data-clickprops = 'Element type: Facet,Value: Manual 6 Speed,Is selected: false']")
+	@FindBy(xpath = "//li[@class='refinement-value'][4]")
 	public WebElement filterTransmissionAutomaticManual6;
 	
-	@FindBy(xpath = "//*[@id=\"MileageFilter\"]/div[2]")
+	@FindBy(xpath = "//div[@class='drawer--label'][@aria-label='Mileage']")
 	public WebElement filterMileage;
 	
-	@FindBy(xpath = "(//span[@class='svg-icon-wrapper'])[8]")
+	@FindBy(xpath = "//div[@class='mileage-filter--container--3_mAj']")
 	public WebElement filterMileageDropDown;
 	
 	@FindBy (xpath = "(//button[@class='kmx-button kmx-button--tertiary kmx-button--flat'])[1]")
-	public WebElement keepStoreButton;
+	public WebElement popUpHandle;
 	
 	
 	

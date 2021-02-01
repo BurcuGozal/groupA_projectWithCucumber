@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 
 
+
 import static org.junit.Assert.assertTrue;
 
 
@@ -29,23 +30,30 @@ public class BurcuSprint3FilterSize {
 	
 	@When("The user clicks on Size option from the Filter list")
 	public void the_user_clicks_on_size_option_from_the_filter_list() {
+		
+		//BrowserUtils.waitForPageToLoad(8);
+		
 		BurcuPage b = new BurcuPage();
-	       
-	    b.shopAllCars.click();
-	    
-	    BrowserUtils.waitForPageToLoad(5);
-	    
-	    BrowserUtils.jsClick(b.keepStoreButton);
-	    
-	    BrowserUtils.waitForPageToLoad(5);
+	      
+//		BrowserUtils.waitForPageToLoad(8);
+//		
+//	    b.shopAllCars.click();
+//	    
+//	    BrowserUtils.waitForPageToLoad(8);
+//	    
+//	    BrowserUtils.popUpHandle(b.popUpHandle);
+//	    
+//	    BrowserUtils.waitForPageToLoad(8);
+//	    
+	    BrowserUtils.waitForPageToLoad(8);
 	   
 	    b.filterSize.click();
 	    
-	    BrowserUtils.waitForPageToLoad(5);
+	    BrowserUtils.waitForPageToLoad(8);
 	    
-	    BrowserUtils.jsClick(b.keepStoreButton);
+	    BrowserUtils.popUpHandle(b.popUpHandle);
 	    
-	    BrowserUtils.waitForPageToLoad(5);
+	    BrowserUtils.waitForPageToLoad(8);
 
 	}
 
@@ -65,35 +73,45 @@ public class BurcuSprint3FilterSize {
 
 	@When("The user clicks on Size options and then clicks on Compact")
 	public void the_user_clicks_on_size_options_and_then_clicks_on_compact() {
+		
+		BrowserUtils.waitForPageToLoad(8);
 	    
 		BurcuPage b = new BurcuPage();
+		
+		 BrowserUtils.waitForPageToLoad(8);
+		   
+		 b.filterSize.click();
+		
+		BrowserUtils.waitForPageToLoad(8);
 
 	    b.filterSizeCompact.click();
 	    
-	    BrowserUtils.waitForPageToLoad(5);
+	    BrowserUtils.waitForPageToLoad(8);
 	    
-	    BrowserUtils.jsClick(b.keepStoreButton);
+	    BrowserUtils.popUpHandle(b.popUpHandle);
 	    
-	    BrowserUtils.waitForPageToLoad(5);
-
-	    
-	    
-	}
-
-	@Then("The user should be able to see the {string} in websites URL, as well")
-	public void the_user_should_be_able_to_see_the_in_websites_url_as_well(String expected) {
-	    
-		BurcuPage b = new BurcuPage();
-	    
-	    assertTrue(Driver.getDriver().getCurrentUrl().contains(expected));
-		
-		
-		
+	    BrowserUtils.waitForPageToLoad(8);
 
 	}
 
-
-	
-	
+//	@Then("The user should be able to see the {string} in websites URL, as well")
+//	public void the_user_should_be_able_to_see_the_in_websites_url_as_well(String expected) {
+//		
+//		BrowserUtils.waitForPageToLoad(8);
+//	    
+//		BurcuPage b = new BurcuPage();
+//		
+//		BrowserUtils.waitForPageToLoad(8);
+//	    
+//	    assertTrue(Driver.getDriver().getCurrentUrl().contains("Compact"));
+//		
+//		
+//		
+//
+//	}
 
 }
+	
+	
+
+
