@@ -1,4 +1,4 @@
-@nihal
+@nihal@hello
 Feature: As a user ,I should be able to search with Browse By Category link , at the bottom line
 
   Background:

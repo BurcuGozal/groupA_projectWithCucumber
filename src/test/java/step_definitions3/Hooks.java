@@ -1,4 +1,4 @@
-package step_definitions;
+package step_definitions3;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,7 +20,6 @@ public class Hooks {
 	@Before ("not @db_only")
 	public void setupScenario() {
 		
-		Driver.getDriver().get(ConfigReader.getProperty("url"));
 		Driver.getDriver().manage().timeouts().
 		implicitlyWait(Long.parseLong(ConfigReader.getProperty("implicitTimeout")), TimeUnit.SECONDS);
 		Driver.getDriver().manage().window().maximize();
