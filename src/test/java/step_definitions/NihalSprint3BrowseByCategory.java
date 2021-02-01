@@ -16,6 +16,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class NihalSprint3BrowseByCategory {
+	
     @When("The user scroll down the page")
     public void the_user_scroll_down_the_page() {
         BrowserUtils.scroll(0,100);
@@ -55,8 +56,8 @@ public class NihalSprint3BrowseByCategory {
     public void the_user_clikcs(String string) {
         NihalBrowseByCategoryPage n=new NihalBrowseByCategoryPage();
         n.toyota.click();
-        BrowserUtils.waitForPageToLoad(2000);
-        BrowserUtils.waitForClickablility(n.keepinStore,2000);
+        BrowserUtils.waitForPageToLoad(5);
+        BrowserUtils.waitForClickablility(n.keepinStore,5);
         Actions actions=new Actions(Driver.getDriver());
         actions.moveToElement(n.keepinStore).click().build().perform();
 
@@ -70,7 +71,7 @@ public class NihalSprint3BrowseByCategory {
     @Then("The user should see the Search by popular location text")
     public void the_user_should_see_the_search_by_popular_location_text() {
         NihalBrowseByCategoryPage n=new NihalBrowseByCategoryPage();
-        BrowserUtils.waitForPageToLoad(2000);
+        BrowserUtils.waitForPageToLoad(5);
         assertTrue(Driver.getDriver().getPageSource().contains(" Search by popular location"));
     }
 

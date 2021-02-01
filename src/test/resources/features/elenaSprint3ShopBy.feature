@@ -1,3 +1,4 @@
+@temp
 Feature: Verify "Shop by" page details
 
 
@@ -22,7 +23,7 @@ Feature: Verify "Shop by" page details
       And  The page title should be "Used Cars for Sale - CarMax"
         
 
-	@temp	 
+
 	 Scenario: Verify Shop by lifestyle page details
       Given The User is on the homepage
       When The user clicks on Shop page link
